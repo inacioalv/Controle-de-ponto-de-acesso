@@ -1,4 +1,4 @@
-package com.inacioalves.Live;
+package com.inacioalves.live;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

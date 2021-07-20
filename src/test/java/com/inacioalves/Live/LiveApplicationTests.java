@@ -1,4 +1,4 @@
-package com.inacioalves.Live;
+package com.inacioalves.live;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
