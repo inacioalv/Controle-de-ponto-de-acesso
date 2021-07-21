@@ -1,4 +1,4 @@
-package com.inacioalves.live.model;
+package com.inacio.Lives.Model;
 
 
 import javax.persistence.Entity;
@@ -12,17 +12,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-
 @Entity
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class JornadaTrabalho {
+public class Ocorrencia {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
+
 }
