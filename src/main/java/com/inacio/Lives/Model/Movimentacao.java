@@ -11,6 +11,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -30,21 +36,23 @@ public class Movimentacao {
 	@EmbeddedId
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private MovimentacaoId id;
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS][.SS][.S]")
+	@DateTimeFormat(iso = ISO.TIME)
 	private LocalDateTime dataEntrada;
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS][.SS][.S]")
+	@DateTimeFormat(iso = ISO.TIME)
 	private LocalDateTime dataSaida;
 	private BigDecimal periodo;
 	
 	@ManyToOne
-	private Ocorrencia ocorrencia;
+	private Ocorrencia ocorrenciaId;
 	@ManyToOne
-	private Calendario calendario;
+	private Calendario calendarioId;
 	
-	@Embeddable
-	@Getter
-	@Setter
-	@NoArgsConstructor
 	@AllArgsConstructor
-	@EqualsAndHashCode
+    @NoArgsConstructor
+    @EqualsAndHashCode
+    @Embeddable
 	public class MovimentacaoId implements Serializable {
 		
 		private static final long serialVersionUID = 1L;
