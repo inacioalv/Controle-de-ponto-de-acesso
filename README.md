@@ -19,7 +19,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Spring](https://spring.io/)
 - [JPA](https://spring.io/projects/spring-data-jpa)
-- [h2](https://jdbc.postgresql.org/)
+- [h2](https://www.h2database.com/html/main.html)
 - [Lombok](https://projectlombok.org/)
 
 ## 💻 Projeto
@@ -28,11 +28,7 @@ API Rest para controle de ponto e acesso dos usuários de uma empresa.
 
 
 ## DataBase
-<a href="https://github.com/chinnonsantos/sql-paises-estados-cidades/tree/master/PostgreSQL">Data</a>
-
-CREATE EXTENSION cube;
-<br/>
-CREATE EXTENSION earthdistance;
+http://localhost:8080/h2
 
 ## :hammer: Para executar o projeto no terminal, digite o seguinte comando:
 
